@@ -20,33 +20,64 @@ $db = new Databaze();
   <head>
     <meta charset="utf-8" name="CHARSET" content="UTF-8">
     <title>Redakční systém</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <?php
+    <div class="container">
+      <?php
 
-    $error404file = "pages/error/404.php";
+      /*
 
-    if(isset($_GET['page'])) {
-      $page = htmlspecialchars($_GET['page']);
+      Odkaz na soubor s chybovou hlaskou 404, tj. soubor/stranka neexistuje
 
-      $file = 'pages/' . $page . '/';
+      */
+      $error404file = "pages/error/404.php";
 
-      if(isset($_GET['sub'])) {
-        $sub = htmlspecialchars($_GET['sub']);
+      /*
 
-        if(isset($_GET['subsub'])) {
-          $subsub = htmlspecialchars($_GET['subsub']);
+      Nacte soubor podle atributu v URL adrese
 
-          $file = $file . $sub . '.' . $subsub . '.php';
+      $page - skupina stranek
+      $sub - stranka dane skupiny (pokud neexistuje, tak index.php)
+      $subsub - rozdeleni dane stranky dane skupiny (nemusi existovat)
 
-          if(file_exists($file)) {
-            include($file);
+      Priklad: userlogin/login.form.php
+        - skupina stranek, ktera zajistuje prihlaseni uzivatele
+        - login je strankou skupiny
+        - form definuje cast login stranky
+        - tj. je to stranka, ve ktere je definovan formular pro prihlaseni uzivatele
+
+      */
+      if(isset($_GET['page'])) {
+        $page = htmlspecialchars($_GET['page']);
+
+        $file = 'pages/' . $page . '/';
+
+        if(isset($_GET['sub'])) {
+          $sub = htmlspecialchars($_GET['sub']);
+
+          if(isset($_GET['subsub'])) {
+            $subsub = htmlspecialchars($_GET['subsub']);
+
+            $file = $file . $sub . '.' . $subsub . '.php';
+
+            if(file_exists($file)) {
+              include($file);
+            } else {
+              include($error404file);
+            }
           } else {
-            include($error404file);
+            $file = $file . $sub . '.php';
+
+            if(file_exists($file)) {
+              include($file);
+            } else {
+              include($error404file);
+            }
           }
         } else {
-          $file = $file . $sub . '.php';
+          $file = $file . 'index.php';
 
           if(file_exists($file)) {
             include($file);
@@ -55,16 +86,11 @@ $db = new Databaze();
           }
         }
       } else {
-        $file = $file . 'index.php';
-
-        if(file_exists($file)) {
-          include($file);
-        } else {
-          include($error404file);
-        }
+        // odkaz na prihlasovaci obrazovku
+        header('Location: ?page=userlogin&sub=login&subsub=form');
       }
-    }
 
-    ?>
+      ?>
+    </div>
   </body>
 </html>
