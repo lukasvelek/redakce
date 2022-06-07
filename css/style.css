@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 #userlogin-form {
@@ -10,4 +11,8 @@ body {
   background-color: white;
 
   color: black;
+}
+
+#dashboard-menu {
+  background-color: #055C9D;
 }
