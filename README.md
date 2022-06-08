@@ -1,3 +1,4 @@
+English version: https://github.com/lukasvelek/redakce#redaction-system-for-private-purposes-only-redakce-redaction
 # Redakční systém (pro soukromé účely: redakce)
 Systém, který umožňuje jednoduchou správu článku, komentářů a autorů.
 Použity jsou hlavně jazyky HTML, CSS a PHP. Semtam bude použit i nějaký jednoduchý skript v JS.
@@ -29,7 +30,7 @@ Currently it's being developed and I work on it as I am free.
 No frameworks are used except for Bootstrap (CSS).
 In further phases of development an easy API will be created and will be able to respond to simple queries.
 
-## What can project currently do?
+## What can it currently do?
  - User login
  - User printout
 
