@@ -1,7 +1,11 @@
 <div class="col-md">
   <div class="row">
     <div class="col-md-2" id="dashboard-menu">
-      <p>text</p>
+      <?php
+
+      include('menus/dashboard-menu.php');
+
+      ?>
     </div>
     <div class="col-md">
     </div>

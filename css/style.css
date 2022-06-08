@@ -15,4 +15,50 @@ body {
 
 #dashboard-menu {
   background-color: #055C9D;
+
+  color: white;
+
+  font-size: 25px;
+
+  height: 100vh;
+}
+
+#users-list {
+  width: 100%;
+}
+
+#users-list td, #users-list tr {
+  text-align: center;
+}
+
+.users-list-row, .users-list-row-header {
+  font-size: 22px;
+
+  color: black;
+}
+
+.users-list-row-header {
+  background-color: #055C9D;
+
+  color: white;
+}
+
+.dashboard-menu-sublink {
+  font-size: 20px;
+
+  font-style: italic;
+}
+
+.dashboard-menu-link, .dashboard-menu-sublink {
+  color: white;
+
+  text-decoration: none;
+
+  margin-left: 25px;
+}
+
+.dashboard-menu-link:hover, .dashboard-menu-sublink:hover {
+  color: white;
+
+  text-decoration: underline;
 }
