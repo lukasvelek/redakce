@@ -40,8 +40,8 @@ $user_count = $db->numRows($user_query_sql);
                     <td>' . $uz_jmeno . '</td>
                     <td>' . $email . '</td>
                     <td>' . $role . '</td>
-                    <td><a href="?page=users&sub=edit&subsub=form&id=' . $id . '">Upravit</a></td>
-                    <td><a href="?page=users&sub=delete&id=' . $id . '">Odstranit</a></td>
+                    <td><a class="users-list-link" href="?page=users&sub=edit&subsub=form&id=' . $id . '">Upravit</a></td>
+                    <td><a class="users-list-link" href="?page=users&sub=delete&id=' . $id . '">Odstranit</a></td>
                   </tr>');
           }
 

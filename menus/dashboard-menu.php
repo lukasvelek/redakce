@@ -1,3 +1,8 @@
+<?php
+
+include('menus/user-info.php');
+
+?>
 <div class="row">
   <a class="dashboard-menu-link" href="?page=dashboard">Hlavní stránka</a>
   <a class="dashboard-menu-link" href="?page=articles&sub=listall">Články</a>

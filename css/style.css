@@ -43,13 +43,23 @@ body {
   color: white;
 }
 
+.users-list-link {
+  color: black;
+  text-decoration: underline;
+}
+
+.users-list-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
 .dashboard-menu-sublink {
   font-size: 20px;
 
   font-style: italic;
 }
 
-.dashboard-menu-link, .dashboard-menu-sublink {
+.dashboard-menu-link, .dashboard-menu-sublink, .dashboard-menu-text {
   color: white;
 
   text-decoration: none;
