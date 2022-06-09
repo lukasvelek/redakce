@@ -23,32 +23,32 @@ body {
   height: 100vh;
 }
 
-#users-list {
+#users-list, #articles-list {
   width: 100%;
 }
 
-#users-list td, #users-list tr {
+#users-list td, #users-list tr, #articles-list td, #articles-list tr {
   text-align: center;
 }
 
-.users-list-row, .users-list-row-header {
+.users-list-row, .users-list-row-header, .articles-list-row, .articles-list-row-header {
   font-size: 22px;
 
   color: black;
 }
 
-.users-list-row-header {
+.users-list-row-header, .articles-list-row-header {
   background-color: #055C9D;
 
   color: white;
 }
 
-.users-list-link {
+.users-list-link, .articles-list-link {
   color: black;
   text-decoration: underline;
 }
 
-.users-list-link:hover {
+.users-list-link:hover, .articles-list-link:hover {
   color: black;
   text-decoration: underline;
 }

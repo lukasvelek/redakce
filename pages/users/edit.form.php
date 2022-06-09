@@ -1,6 +1,6 @@
 <?php
 
-$id = htmlspecialchars($_GET['id']);
+$id = $fw->urlGet('id');
 
 $user_query_sql = "SELECT * FROM `users` WHERE `id` LIKE '$id'";
 

@@ -53,6 +53,23 @@ class Framework {
   public function urlPost($name) {
     return htmlspecialchars($_POST[$name]);
   }
+
+  /*
+
+  Vrati text zkraceny na nejakou delku
+
+  */
+  public function cutTextByLength($text, $length) {
+    $result = "";
+
+    for($i = 0; $i < $length; $i++) {
+      $result = $result . $text[$i];
+    }
+
+    $result = $result . "...";
+
+    return $result;
+  }
 }
 
 ?>
