@@ -2,7 +2,7 @@
 
 // nacteni dulezitych knihoven
 include('../php/Databaze.php');
-include('Utils.php');
+include('scripts/Utils.php');
 
 // vytvoreni instanci dulezitych knihoven
 $db = new Databaze();
