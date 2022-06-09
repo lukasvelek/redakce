@@ -8,10 +8,9 @@ V dalších fázích vývoje bude vytvořeno i jednoduché API, které bude odpo
 
 ## Co projekt zatím umí? (pokud není napsáno jinak, tak vytvořeno pouze jednodušše - tj. časem přijde update / upgrade)
  - Přihlašování
- - Výpis uživatelů
+ - Správa uživatelů
 
 ## TODO neboli plány do budoucna
- - Dokončení správy uživatelů
  - Statistiky
  - Komentáře
  - Správa článků
@@ -32,10 +31,9 @@ In further phases of development an easy API will be created and will be able to
 
 ## What can it currently do?
  - User login
- - User printout
+ - User management
 
 ## TODO / future plans
- - Finish user management
  - Stats
  - Comments
  - Article management
