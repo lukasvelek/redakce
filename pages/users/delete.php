@@ -1,6 +1,6 @@
 <?php
 
-$id = htmlspecialchars($_GET['id']);
+$id = $fw->urlGet('id');
 
 $sql = "DELETE FROM `users` WHERE `id` LIKE '$id'";
 

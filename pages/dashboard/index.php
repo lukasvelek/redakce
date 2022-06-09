@@ -3,7 +3,7 @@
     <div class="col-md-2" id="dashboard-menu">
       <?php
 
-      include('menus/dashboard-menu.php');
+      $fw->includeCurrentMenu();
 
       ?>
     </div>

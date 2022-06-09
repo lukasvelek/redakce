@@ -1,10 +1,10 @@
 <?php
 
-$id = htmlspecialchars($_POST['id']);
-$name = htmlspecialchars($_POST['name']);
-$username = htmlspecialchars($_POST['username']);
-$email = htmlspecialchars($_POST['email']);
-$role = htmlspecialchars($_POST['role']);
+$id = $fw->urlPost('id');
+$name = $fw->urlPost('name');
+$username = $fw->urlPost('username');
+$email = $fw->urlPost('email');
+$role = $fw->urlPost('role');
 
 $sql = "UPDATE `users` SET `name` = '$name', `username` = '$username', `email` = '$email',
                            `role` = '$role'

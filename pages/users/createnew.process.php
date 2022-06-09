@@ -1,10 +1,10 @@
 <?php
 
-$name = htmlspecialchars($_POST['name']);
-$username = htmlspecialchars($_POST['username']);
-$password = md5(htmlspecialchars($_POST['password']));
-$email = htmlspecialchars($_POST['email']);
-$role = htmlspecialchars($_POST['role']);
+$name = $fw->urlPost('name');
+$username = $fw->urlPost('username');
+$password = md5($fw->urlPost('password'));
+$email = $fw->urlPost('email');
+$role = $fw->urlPost('role');
 
 $sql = "INSERT INTO `users` (`username`, `name`, `email`, `password`, `role`)
         VALUES ('$username', '$name', '$email', '$password', '$role')";

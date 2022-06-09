@@ -6,6 +6,7 @@ Nacitani modulu / trid
 
 */
 include('php/Databaze.php');
+include('php/Framework.php');
 
 /*
 
@@ -13,6 +14,7 @@ Tvorba objektu z nactenych modulu / trid
 
 */
 $db = new Databaze();
+$fw = new Framework();
 
 ?>
 <!DOCTYPE html>
@@ -50,15 +52,15 @@ $db = new Databaze();
 
       */
       if(isset($_GET['page'])) {
-        $page = htmlspecialchars($_GET['page']);
+        $page = $fw->urlGet('page');
 
         $file = 'pages/' . $page . '/';
 
         if(isset($_GET['sub'])) {
-          $sub = htmlspecialchars($_GET['sub']);
+          $sub = $fw->urlGet('sub');
 
           if(isset($_GET['subsub'])) {
-            $subsub = htmlspecialchars($_GET['subsub']);
+            $subsub = $fw->urlGet('subsub');
 
             $file = $file . $sub . '.' . $subsub . '.php';
 

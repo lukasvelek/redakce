@@ -1,7 +1,7 @@
 <?php
 
-$uzjmeno = htmlspecialchars($_POST['uzjmeno']);
-$uzheslo = htmlspecialchars($_POST['uzheslo']);
+$uzjmeno = $fw->urlPost('uzjmeno');
+$uzheslo = $fw->urlPost('uzheslo');
 
 $uzheslo_md5 = md5($uzheslo);
 

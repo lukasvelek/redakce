@@ -49,7 +49,7 @@ class Databaze {
     Konstruktor, ve kterem jsou prirazeny hodnoty promennym
 
     */
-    function __construct() {
+    public function __construct() {
       $this->db_server = "localhost";
       $this->db_uz_jmeno = "root";
       $this->db_uz_heslo = "";
@@ -67,7 +67,7 @@ class Databaze {
     Vraci vysledek operace
 
     */
-    function query($sql) {
+    public function query($sql) {
       return $this->db_session->query($sql);
     }
 
@@ -80,7 +80,7 @@ class Databaze {
     Vraci pocet vysledku
 
     */
-    function numRows($sql) {
+    public function numRows($sql) {
       return $this->query($sql)->num_rows;
     }
 
@@ -89,7 +89,7 @@ class Databaze {
     Funkce, ve ktere bude casem definovany postup tvorby tabulek v dane databazi
 
     */
-    function tabulky() {
+    public function tabulky() {
 
     }
 }
